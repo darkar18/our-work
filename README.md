@@ -130,3 +130,28 @@ Example of generated images using StyleGAN3 and moving the images towards the at
 <p float="center">
   <img src="images/sg3_beard.jpeg"/>
 </p>
+
+## Citation
+
+This repository is based on the [original interfacegan code](https://github.com/genforce/interfacegan)
+
+
+```bibtex
+@inproceedings{shen2020interpreting,
+  title     = {Interpreting the Latent Space of GANs for Semantic Face Editing},
+  author    = {Shen, Yujun and Gu, Jinjin and Tang, Xiaoou and Zhou, Bolei},
+  booktitle = {CVPR},
+  year      = {2020}
+}
+```
+
+```bibtex
+@article{shen2020interfacegan,
+  title   = {InterFaceGAN: Interpreting the Disentangled Face Representation Learned by GANs},
+  author  = {Shen, Yujun and Yang, Ceyuan and Tang, Xiaoou and Zhou, Bolei},
+  journal = {TPAMI},
+  year    = {2020}
+}
+```
+
+[![Stargazers repo roster for @younesbelkada/interfacegan](https://reporoster.com/stars/younesbelkada/interfacegan)](https://github.com/younesbelkada/interfacegan/stargazers)

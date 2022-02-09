@@ -154,4 +154,6 @@ This repository is based on the [original interfacegan code](https://github.com/
 }
 ```
 
+## Stargazers
+
 [![Stargazers repo roster for @younesbelkada/interfacegan](https://reporoster.com/stars/younesbelkada/interfacegan)](https://github.com/younesbelkada/interfacegan/stargazers)

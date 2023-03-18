@@ -76,7 +76,7 @@ class BaseGenerator(object):
     self.batch_size = model_settings.MAX_IMAGES_ON_DEVICE
     self.logger = logger or get_temp_logger(model_name + '_generator')
     self.model = None
-    self.run_device = 'cuda' if self.use_cuda else 'cpu'
+    self.run_device = 'cuda' if self.use_cuda else 'dml'
     self.cpu_device = 'cpu'
 
     # Check necessary settings.

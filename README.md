@@ -22,16 +22,12 @@ This the the repository to a project related to the [*Introduction to Numerical 
 - [Introduction](#introduction)
 - [:fire: Additional features](#-fire--additional-features)
 - [:hammer: Training an attribute detection classifier](#-hammer--training-an-attribute-detection-classifier)
-- [:star: Generate images using StyleGAN & StyleGAN2 & StyleGAN3](#-star--generate-images-using-stylegan---stylegan2---stylegan3)
-  * [:movie_camera: Get the pretrained StyleGAN](#-movie-camera--get-the-pretrained-stylegan)
   * [:movie_camera: Get the pretrained StyleGAN2](#-movie-camera--get-the-pretrained-stylegan2)
   * [:movie_camera: Get the pretrained StyleGAN3](#-movie-camera--get-the-pretrained-stylegan3)
   * [:art: Run the generation script](#-art--run-the-generation-script)
 - [:pencil2: Edit generated images](#-pencil2--edit-generated-images)
   * [Examples](#examples)
-    + [StyleGAN](#stylegan)
     + [StyleGAN2](#stylegan2)
-    + [StyleGAN3](#stylegan3)
 
 ## Introduction
 
@@ -40,11 +36,7 @@ This the the repository to a project related to the [*Introduction to Numerical 
 ## :fire: Additional features
 
 + Supports StyleGAN2 & StyleGAN3 on the classic attributes
-+ New attributes (Bald, Gray hair, Blond hair, Earings, ...) for:
-  + StyleGAN
-  + StyleGAN2
-  + StyleGAN3
-+ Supports face generation using StyleGAN3 & StyleGAN2
++ New attributes (Bald, Gray hair, Blond hair, Earings, ...) for: Stylegan2
 
 The list of new features can be found on our [attributes detection classifier repository](https://github.com/clementapa/CelebFaces_Attributes_Classification/blob/main/utils/constant.py)
 
@@ -52,15 +44,15 @@ The list of new features can be found on our [attributes detection classifier re
 
 We use a ViT-base model to train an attribute detection classifier, please refer to our [classification code](https://github.com/clementapa/CelebFaces_Attributes_Classification) if you want to test it for new models. Once you retrieve the trained SVM from this repo, you can directly move them in this repo and use them.
 
-## :star: Generate images using StyleGAN & StyleGAN2 & StyleGAN3
+## :star: Generate images using StyleGAN2
 
 We did not changed anything to the structure of the old repository, please refer to the [previous README](https://github.com/younesbelkada/interfacegan/blob/master/README_old.md). For StyleGAN
 
-### :movie_camera: Get the pretrained StyleGAN
+<!-- ### :movie_camera: Get the pretrained StyleGAN
 
 We use the styleGAN trained on ffhq for our experiments, if you want to reproduce them, run:
 ```
-wget -P interfacegan/models/pretrain https://www.dropbox.com/s/qyv37eaobnow7fu/stylegan_ffhq.pth
+wget -P interfacegan/models/pretrain https://www.dropbox.com/s/qyv37eaobnow7fu/stylegan_ffhq.pth -->
 ```
 
 ### :movie_camera: Get the pretrained StyleGAN2
@@ -70,22 +62,12 @@ We use the styleGAN2 trained on ffhq for our experiments, if you want to reprodu
 wget -P models/pretrain https://api.ngc.nvidia.com/v2/models/nvidia/research/stylegan2/versions/1/files/stylegan2-ffhq-1024x1024.pkl 
 ```
 
-### :movie_camera: Get the pretrained StyleGAN3
-
-We use the styleGAN3 trained on ffhq for our experiments, if you want to reproduce them, run:
-```
-wget -P models/pretrain https://api.ngc.nvidia.com/v2/models/nvidia/research/stylegan3/versions/1/files/stylegan3-t-ffhq-1024x1024.pkl 
-```
-
-The pretrained model should be copied at ``` models/pretrain ```. If not, move the pretrained model file at this directory.
-
 ### :art: Run the generation script
 
-If you want to generate 10 images using styleGAN3 downloaded before, run:
+If you want to generate 10 images using styleGAN2 downloaded before, run:
 ```
-python generate_data.py -m stylegan3_ffhq -o output_stylegan3 -n 10
+python generate_data.py -m stylegan2_ffhq -o output_stylegan1 -n 10
 ```
-The arguments are exactly the same as the arguments from the original repository, the code supports the flag ```-m stylegan3_ffhq``` for styleGAN3 and ```-m stylegan3_ffhq``` for styleGAN2.
 
 ## :pencil2: Edit generated images
 
@@ -120,21 +102,7 @@ Example of generated images using StyleGAN2 and moving the images towards the op
   <img src="images/sg2_not_young.jpeg" alt="non young version of the images generated with StyleGAN2"/>
 </p>
 
-#### StyleGAN3
-
-Example of generated images using StyleGAN3 and moving the images towards the attribute **beard**:
-
-<p float="center">
-  <img src="images/sg3_before.jpeg"/>
-</p>
-<p float="center">
-  <img src="images/sg3_beard.jpeg"/>
-</p>
-
 ## Citation
-
-This repository is based on the [original interfacegan code](https://github.com/genforce/interfacegan)
-
 
 ```bibtex
 @inproceedings{shen2020interpreting,
@@ -153,7 +121,3 @@ This repository is based on the [original interfacegan code](https://github.com/
   year    = {2020}
 }
 ```
-
-## Stargazers
-
-[![Stargazers repo roster for @younesbelkada/interfacegan](https://reporoster.com/stars/younesbelkada/interfacegan)](https://github.com/younesbelkada/interfacegan/stargazers)

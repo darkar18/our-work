@@ -6,7 +6,7 @@
 ![pytorch 1.10.2](https://img.shields.io/badge/pytorch-1.10.2-green.svg?style=plastic)
 ![sklearn 0.21.2](https://img.shields.io/badge/sklearn-0.21.2-green.svg?style=plastic)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/younesbelkada/interfacegan/blob/master/InterFaceGAN%2B%2B.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/darkar_18/style-interface/blob/master/InterFaceGAN%2B%2B.ipynb)
 
 <p float="left">
   <img src="images/bald2.gif" width="200" />
@@ -23,7 +23,7 @@ This the the repository to a project related to the [*Introduction to Numerical 
 - [:fire: Additional features](#-fire--additional-features)
 - [:hammer: Training an attribute detection classifier](#-hammer--training-an-attribute-detection-classifier)
   * [:movie_camera: Get the pretrained StyleGAN2](#-movie-camera--get-the-pretrained-stylegan2)
-  * [:movie_camera: Get the pretrained StyleGAN3](#-movie-camera--get-the-pretrained-stylegan3)
+  <!-- * [:movie_camera: Get the pretrained StyleGAN3](#-movie-camera--get-the-pretrained-stylegan3) -->
   * [:art: Run the generation script](#-art--run-the-generation-script)
 - [:pencil2: Edit generated images](#-pencil2--edit-generated-images)
   * [Examples](#examples)

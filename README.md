@@ -34,8 +34,6 @@ This the the repository to a project related to the [*Introduction to Numerical 
 > In this repository, we propose an approach, termed as InterFaceGAN++, for semantic face editing based on the work from Shen et al. Specifically, we leverage the ideas from the previous work, by applying the method for new face attributes, and also for StyleGAN3. We qualitatively explain that moving the latent vector toward the trained boundaries leads in many cases to keeping the semantic information of the generated images (by preserving its local structure) and modify the desired attribute, thus helps to demonstrate the disentangled property of the styleGANs. 
 
 ## :fire: Additional features
-
-+ Supports StyleGAN2 & StyleGAN3 on the classic attributes
 + New attributes (Bald, Gray hair, Blond hair, Earings, ...) for: Stylegan2
 
 The list of new features can be found on our [attributes detection classifier repository](https://github.com/clementapa/CelebFaces_Attributes_Classification/blob/main/utils/constant.py)

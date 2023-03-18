@@ -46,21 +46,15 @@ We use a ViT-base model to train an attribute detection classifier, please refer
 
 We did not changed anything to the structure of the old repository, please refer to the [previous README](https://github.com/younesbelkada/interfacegan/blob/master/README_old.md). For StyleGAN
 
-<!-- ### :movie_camera: Get the pretrained StyleGAN
 
-We use the styleGAN trained on ffhq for our experiments, if you want to reproduce them, run:
-```
-wget -P interfacegan/models/pretrain https://www.dropbox.com/s/qyv37eaobnow7fu/stylegan_ffhq.pth -->
-```
-
-### :movie_camera: Get the pretrained StyleGAN2
+## :movie_camera: Get the pretrained StyleGAN2
 
 We use the styleGAN2 trained on ffhq for our experiments, if you want to reproduce them, run:
 ```
 wget -P models/pretrain https://api.ngc.nvidia.com/v2/models/nvidia/research/stylegan2/versions/1/files/stylegan2-ffhq-1024x1024.pkl 
 ```
 
-### :art: Run the generation script
+## :art: Run the generation script
 
 If you want to generate 10 images using styleGAN2 downloaded before, run:
 ```
@@ -70,24 +64,6 @@ python generate_data.py -m stylegan2_ffhq -o output_stylegan1 -n 10
 ## :pencil2: Edit generated images
 
 You can edit the generated images using our trained boundaries! Depending on the generator you want to use, make sure that you have downloaded the right model and put them into ``` models/pretrain ```. 
-
-### Examples
-
-Please refer to our interactive google colab notebook to play with our models by clicking the following badge:
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/younesbelkada/interfacegan/blob/master/InterFaceGAN%2B%2B.ipynb)
-
-
-#### StyleGAN
-
-Example of generated images using StyleGAN and moving the images towards the direction of the attribute **grey hair**:
-
-<p float="center">
-  <img src="images/sg_before.jpeg" alt="original images generated with StyleGAN"/>
-</p>
-<p float="center">
-  <img src="images/sg_grey_hair.jpeg" alt="grey hair version of the images generated with StyleGAN"/>
-</p>
 
 #### StyleGAN2
 

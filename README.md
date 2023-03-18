@@ -65,7 +65,7 @@ python generate_data.py -m stylegan2_ffhq -o output_stylegan1 -n 10
 
 You can edit the generated images using our trained boundaries! Depending on the generator you want to use, make sure that you have downloaded the right model and put them into ``` models/pretrain ```. 
 
-#### StyleGAN2
+## StyleGAN2
 
 Example of generated images using StyleGAN2 and moving the images towards the opposite direction of the attribute **young**:
 

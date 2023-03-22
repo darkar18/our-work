@@ -11,3 +11,4 @@ log.txt
 /models/pretrain/
 /data/
 !/boundaries/*.npy
+//

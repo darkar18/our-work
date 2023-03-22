@@ -98,7 +98,7 @@ def main():
                                       **kwargs,
                                       generate_style=args.generate_style,
                                       generate_image=args.generate_image)
-    elif gan_type == 'stylegan3' or gan_type == 'stylegan2':
+    elif gan_type == 'stylegan2':
       outputs = model.easy_synthesize(latent_codes_batch,
                                       **kwargs,
                                       generate_style=args.generate_style,

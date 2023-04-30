@@ -89,10 +89,7 @@ class StyleGAN2Generator(BaseGenerator):
 
     Returns:
       A `numpy.ndarray` as sampled latend codes.
-
-    Raises:
-      ValueError: If the given `latent_space_type` is not supported.
-    """
+"""
     latent_space_type = latent_space_type.upper()
     if latent_space_type == 'Z':
       latent_codes = np.random.randn(num, self.latent_space_dim)
@@ -106,20 +103,7 @@ class StyleGAN2Generator(BaseGenerator):
     return latent_codes.astype(np.float32)
 
   def preprocess(self, latent_codes, latent_space_type='Z'):
-    """Preprocesses the input latent code if needed.
-
-    Args:
-      latent_codes: The input latent codes for preprocessing.
-      latent_space_type: Type of latent space to which the latent codes belong.
-        Only [`Z`, `W`, `WP`] are supported. Case insensitive. (default: `Z`)
-
-    Returns:
-      The preprocessed latent codes which can be used as final input for the
-        generator.
-
-    Raises:
-      ValueError: If the given `latent_space_type` is not supported.
-    """
+  
     if not isinstance(latent_codes, np.ndarray):
       raise ValueError(f'Latent codes should be with type `numpy.ndarray`!')
 

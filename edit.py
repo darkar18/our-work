@@ -19,7 +19,6 @@ import numpy as np
 from tqdm import tqdm
 
 from models.model_settings import MODEL_POOL
-from models.stylegan_generator import StyleGANGenerator
 from models.stylegan3_generator import StyleGAN3Generator
 from models.stylegan2_generator import StyleGAN2Generator
 from utils.logger import setup_logger
@@ -66,10 +65,7 @@ def main():
 
   logger.info(f'Initializing generator.')
   gan_type = MODEL_POOL[args.model_name]['gan_type']
-  if gan_type == 'stylegan':
-    model = StyleGANGenerator(args.model_name, logger)
-    kwargs = {'latent_space_type': args.latent_space_type}
-  elif gan_type == 'stylegan3':
+  if gan_type == 'stylegan3':
     model = StyleGAN3Generator(args.model_name, logger)
     kwargs = {'latent_space_type': args.latent_space_type}
   elif gan_type == 'stylegan2':

@@ -1,11 +1,4 @@
-﻿# Copyright (c) 2021, NVIDIA CORPORATION.  All rights reserved.
-#
-# NVIDIA CORPORATION and its licensors retain all intellectual property
-# and proprietary rights in and to this software, related documentation
-# and any modifications thereto.  Any use, reproduction, disclosure or
-# distribution of this software and related documentation without an express
-# license agreement from NVIDIA CORPORATION is strictly prohibited.
-
+﻿
 import numpy as np
 import torch
 from torch_utils import misc
@@ -52,12 +45,12 @@ def modulated_conv2d(
     w = None
     dcoefs = None
     if demodulate or fused_modconv:
-        w = weight.unsqueeze(0) # [NOIkk]
-        w = w * styles.reshape(batch_size, 1, -1, 1, 1) # [NOIkk]
+        w = weight.unsqueeze(0)
+        w = w * styles.reshape(batch_size, 1, -1, 1, 1)
     if demodulate:
         dcoefs = (w.square().sum(dim=[2,3,4]) + 1e-8).rsqrt() # [NO]
     if demodulate and fused_modconv:
-        w = w * dcoefs.reshape(batch_size, -1, 1, 1, 1) # [NOIkk]
+        w = w * dcoefs.reshape(batch_size, -1, 1, 1, 1)
 
     # Execute by scaling the activations before and after the convolution.
     if not fused_modconv:

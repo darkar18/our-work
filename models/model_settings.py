@@ -18,39 +18,12 @@ BASE_DIR = os.path.dirname(os.path.relpath(__file__))
 MODEL_DIR = BASE_DIR + '/pretrain'
 
 MODEL_POOL = {
-    'pggan_celebahq': {
-        'tf_model_path': MODEL_DIR + '/karras2018iclr-celebahq-1024x1024.pkl',
-        'model_path': MODEL_DIR + '/pggan_celebahq.pth',
-        'gan_type': 'pggan',
-        'dataset_name': 'celebahq',
-        'latent_space_dim': 512,
-        'resolution': 1024,
-        'min_val': -1.0,
-        'max_val': 1.0,
-        'output_channels': 3,
-        'channel_order': 'RGB',
-        'fused_scale': False,
-    },
     'stylegan_celebahq': {
         'tf_model_path':
             MODEL_DIR + '/karras2019stylegan-celebahq-1024x1024.pkl',
         'model_path': MODEL_DIR + '/stylegan_celebahq.pth',
         'gan_type': 'stylegan',
         'dataset_name': 'celebahq',
-        'latent_space_dim': 512,
-        'w_space_dim': 512,
-        'resolution': 1024,
-        'min_val': -1.0,
-        'max_val': 1.0,
-        'output_channels': 3,
-        'channel_order': 'RGB',
-        'fused_scale': 'auto',
-    },
-    'stylegan_ffhq': {
-        'tf_model_path': MODEL_DIR + '/karras2019stylegan-ffhq-1024x1024.pkl',
-        'model_path': MODEL_DIR + '/stylegan_ffhq.pth',
-        'gan_type': 'stylegan',
-        'dataset_name': 'ffhq',
         'latent_space_dim': 512,
         'w_space_dim': 512,
         'resolution': 1024,
@@ -75,20 +48,36 @@ MODEL_POOL = {
         'channel_order': 'RGB',
         'fused_scale': 'auto',
     },
-    'stylegan3_ffhq': {
-        'model_path': MODEL_DIR + '/stylegan3-t-ffhq-1024x1024.pkl',
-        'gan_type': 'stylegan3',
-        'dataset_name': 'ffhq',
+
+    'stylegan2_celebahq': {
+        'tf_model_path': MODEL_DIR + '/stylegan2-celebahq-256x256.pkl',
+        'model_path': MODEL_DIR + '/stylegan2-celebahq-256x256.pkl',
+        'gan_type': 'stylegan2',
+        'dataset_name': 'celebahq',
         'latent_space_dim': 512,
         'w_space_dim': 512,
         'c_space_dim': 512,
-        'resolution': 1024,
+        'resolution': 256,
         'min_val': -1.0,
         'max_val': 1.0,
         'output_channels': 3,
         'channel_order': 'RGB',
         'fused_scale': 'auto',
-    }, 
+    }
+    # 'stylegan3_ffhq': {
+    #     'model_path': MODEL_DIR + '/stylegan3-t-ffhq-1024x1024.pkl',
+    #     'gan_type': 'stylegan3',
+    #     'dataset_name': 'ffhq',
+    #     'latent_space_dim': 512,
+    #     'w_space_dim': 512,
+    #     'c_space_dim': 512,
+    #     'resolution': 1024,
+    #     'min_val': -1.0,
+    #     'max_val': 1.0,
+    #     'output_channels': 3,
+    #     'channel_order': 'RGB',
+    #     'fused_scale': 'auto',
+    # }, 
 }
 
 # Settings for StyleGAN.

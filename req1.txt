@@ -28,7 +28,6 @@ six
 sklearn
 threadpoolctl
 torch
-torch-directml
 torchvision
 tqdm
 typing_extensions

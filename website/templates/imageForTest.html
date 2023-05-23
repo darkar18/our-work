@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Received Image</title>
+    <style>
+        .image-container {
+            width: 100%;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            max-height: 80vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="data:image/png;base64,{{ image_data }}" alt="Received Image">
+    </div>
+</body>
+</html>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Adjuster</title>
           <!-- font icons -->
-          <link rel="stylesheet" href="static/static/themify-icons/css/themify-icons.css">
+          <link rel="stylesheet" href="{{url_for('static', filename='themify-icons/css/themify-icons.css') }}">
 
           <!-- Bootstrap + Creative Studio main styles -->
           <link rel="stylesheet" href="{{ url_for('static', filename='css/creative-studio.css') }}">
@@ -64,10 +64,12 @@
         <input type="range" min="-3" max="3" value=".01" name = "sl5"class="slider" id="myRange">
       <div class="slidecontainer" >  
         <button class="btn btn-primary rounded"><a href="index3.html"></a><i class="ti-thumb-up pr-1"></i>Generate Image</button>
+        
+        <button class="btn btn-primary rounded "><a href="new"></a><i class="ti-blackboard"></i> Generate new Image </button>
       </form>
-
-        <button class="btn btn btn-primary rounded ><i class="ti-blackboard"></i> Save </button>
-  
+      <form action="new" method="POST">
+        <button class="btn btn-primary rounded"><a href="index3.html"></a><i class="ti-blackboard"></i> Generate New Image </button>
+      </form>
       </div>
     </div>
       </div>

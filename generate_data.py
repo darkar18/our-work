@@ -1,12 +1,4 @@
-# python3.7
-"""Generates a collection of images with specified model.
 
-Commonly, this file is used for data preparation. More specifically, before
-exploring the hidden semantics from the latent space, user need to prepare a
-collection of images. These images can be used for further attribute prediction.
-In this way, it is able to build a relationship between input latent codes and
-the corresponding attribute scores.
-"""
 
 import os.path
 import argparse
@@ -16,7 +8,7 @@ import numpy as np
 from tqdm import tqdm
 
 from models.model_settings import MODEL_POOL
-from models.pggan_generator import PGGANGenerator
+# from models.pggan_generator import PGGANGenerator
 from models.stylegan_generator import StyleGANGenerator
 from models.stylegan3_generator import StyleGAN3Generator
 from models.stylegan2_generator import StyleGAN2Generator

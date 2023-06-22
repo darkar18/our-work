@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Adjuster</title>
+          <!-- font icons -->
+          <link rel="stylesheet" href="static/static/themify-icons/css/themify-icons.css">
+
+          <!-- Bootstrap + Creative Studio main styles -->
+          <link rel="stylesheet" href="{{ url_for('static', filename='css/creative-studio.css') }}">
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-secondary rounded shadow mb-3">
+    <div class="container">
+      <img src="static/imgs/logo.png" alt="logo" width="25px">
+       <a class="navbar-brand" href="/">Text2Face</a>
+       <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto"> 
+             <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="#service">Process</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="#team">Images</a>
+             </li>
+             <li class="nav-item">
+                <a href="/" class="ml-4 mt-1 btn btn-light btn-sm">Home</a>
+             </li>
+          </ul>                       
+       </div>
+    </div>
+ </nav>
+  <div class="column">
+  <div class="image1" >
+  <img src="data:image/png;base64,{{ image_data }}" alt="Rendered Image" width="500" height="500">
+  
+
+  </div>
+  
+  <div>
+    <div class="slidecontainer" >
+      <form action="edit" method="POST">
+        <h4>Gender</h4>
+        <input type="range" min="-3" max="3" value=".01" name = "sl1"class="slider" id="myRange">
+      </div>
+      <h4>Age</h4>
+      <div class="slidecontainer" >
+        <input type="range" min="-3" max="3" value=".01" name = "sl2"class="slider" id="myRange">
+      </div>
+      <h4>Smile</h4>
+      <div class="slidecontainer" >
+        <input type="range" min="-3" max="3" value=".01" name = "sl3"class="slider" id="myRange">
+      </div>
+      <h4>Hat</h4>
+      <div class="slidecontainer" >
+        <input type="range" min="-3" max="3" value=".01" name = "sl4"class="slider" id="myRange">
+      </div>
+      <h4>Makeup</h4>
+      <div class="slidecontainer" >
+        <input type="range" min="-3" max="3" value=".01" name = "sl5"class="slider" id="myRange">
+      <div class="slidecontainer" >  
+        <button class="btn btn-primary rounded"><a href="index3.html"></a><i class="ti-thumb-up pr-1"></i>Generate Image</button>
+      </form>
+      <form action="new" method="POST">
+        <button class="btn btn-primary rounded"><a href="index3.html"></a><i class="ti-blackboard"></i> Generate New Image </button>
+      </form>
+      </div>
+    </div>
+      </div>
+     
+
+ 
+</body>
+<style>
+
+.navbar-brand {
+  font-family: 'Trebuchet MS',sans-serif;
+}  
+
+.image1{
+  display: inline-block;
+}
+
+ .slidecontainer{
+  display: center;
+  padding-left: 5px;
+} 
+
+
+.column {
+  background-color:rgba(181, 185, 230, 0.986);
+  display: flex;
+  padding: 15px;
+}
+
+
+.slider {
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;  
+  background-color: #0e1036;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  /* margin: -4500px 1100px; */
+  display: inline-block;
+  align-items: top;
+  padding-left: 10;
+  /* padding-top: 80%; */
+  
+}
+  </style>
+  </html>
